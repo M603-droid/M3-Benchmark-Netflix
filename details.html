@@ -17,7 +17,7 @@
     />
     <link rel="stylesheet" href="style.css">
 
-    <title>Hello, world!</title>
+    <title>Movie Details</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-black mb-4">
@@ -137,14 +137,13 @@
     <script>
         const movieId = new URLSearchParams(window.location.search)
         const newmovieId =  movieId.get("id")
-        const catagory = movieId.get("category")
         console.log(newmovieId)
 
         window.onload = async () => {
             const url = "https://striveschool-api.herokuapp.com/api/movies/";
            
         
-            const response = await fetch(url + newmovieId +"/" +catagory,  {
+            const response = await fetch(url + newmovieId +"/" + catagory,  {
               method: "GET",
               headers: {
                 Authorization:

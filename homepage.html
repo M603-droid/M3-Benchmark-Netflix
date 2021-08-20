@@ -18,7 +18,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-black mb-4">
         <div class="container-fluid">
-       <a class="navbar-brand" href="#"><img src="images/Netflix-logo.png" alt="" id="logo"></a>--> 
+       <a class="navbar-brand" href="#"><img src="images/Netflix-logo.png" alt="" id="logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -94,7 +94,6 @@
         <div class="Movies-list1 mb-2">
             
             <div class="movie-row1">
-                <h1>Action Movies</h1>
                 <div class="row" id="movie-list">
             
                  
@@ -114,7 +113,6 @@
       <div class="Movies-list1 mb-2">
             
         <div class="movie-row1">
-            <h1>Horror Movies</h1>
             <div class="row">
         
              
@@ -232,7 +230,7 @@
 <script>
           const getMovies = async () => {
 
-    const url =  "https://striveschool-api.herokuapp.com/api/movies/thriller"
+    const url =  "https://striveschool-api.herokuapp.com/api/movies/drama"
     try {
           const response = await fetch(
             url,
@@ -255,17 +253,19 @@
           document.querySelector("#movie-list");
 
           allTheMovies.forEach((movie) => {
-            displayMovieContainer.innerHTML += `<div class="card col-12 col-sm-6 col-md-4 col-lg-2">
-                <img class="card-img-top" src="${movie.imageUrl}" alt="Card image cap">
+            displayMovieContainer.innerHTML += `<div class="card col-12 col-sm-6 col-md-4 col-lg-2 pl-0">
+                <img class="card-img-top w-100" src="${movie.imageUrl}" alt="Card image cap">
 
                     <div class="card-body">
-                    <h5 class="card-title">${movie.name}</h5>
-                    <p class="card-text">Description: ${movie.description}</p>
-                    <p class="card-text">Category: ${movie.catagory}</p>
+                    
+                    
                     <a href="/details.html?id=${movie._id}&category=action">Click Here</a>
 
 
                 </div>
+                
+
+
                 </div>`;
         });
       };
