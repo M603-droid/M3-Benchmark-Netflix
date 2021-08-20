@@ -1,0 +1,43 @@
+#logo {
+  width: 80px;
+  height: 40px;
+  margin-top: 10px;
+}
+.navbar {
+  height: 30px;
+}
+body {
+  background-color: rgb(94, 89, 89);
+}
+#search-logo {
+  height: 20px;
+  width: 20px;
+}
+.movie-list {
+  width: 100%;
+}
+.user-avatar {
+  height: 20 px;
+  width: 20px;
+  background-color: black;
+}
+.dropdown-menu {
+  background-color: rgb(39, 37, 37);
+}
+.dropdown-item {
+  color: white;
+}
+.navbar-nav {
+  margin-right: 50px;
+  margin-top: 10px;
+}
+.genre-button {
+  margin-left: 3em;
+}
+.movie-row {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.row {
+  padding: 0px;
+}
